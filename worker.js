@@ -1,5 +1,5 @@
 const HTML = `<!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BiiLHex Studio</title>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BiiLHex Studio — Ultra Edition</title>
 <style>
 :root{--bg:#07080a;--panel:#101216;--panel2:#15181e;--border:#292d35;--silver:#edf0f6;--muted:#9298a5;--soft:#b9c1ce;--green:#75c99b}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -15%,#2a303b 0,transparent 42%),var(--bg);color:var(--silver);font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer;color:inherit}
@@ -10,7 +10,23 @@ main{margin-left:245px;padding:23px clamp(16px,3.4vw,48px) 55px;max-width:1700px
 @media(min-width:1200px){.tools{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:850px){.sidebar{width:220px}main{margin-left:220px}.hero{padding:32px 26px}.stats{gap:9px}.stat{padding:14px}.stat strong{font-size:22px}}
 @media(max-width:650px){.sidebar{transform:translateX(-105%);width:260px;box-shadow:20px 0 50px #0008}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:14px 13px 40px}.topbar{margin-bottom:17px;gap:8px}.hamb{width:42px;height:42px;flex:none}.search{height:42px}.topright{gap:7px}.roundbtn,.avatar{width:39px;height:39px}.hero{min-height:315px;padding:29px 24px;border-radius:18px}.hero:before{left:10%;opacity:.5}.hero h1{font-size:45px}.hero p{font-size:13px;margin-top:19px}.stats{gap:9px;margin-top:12px}.stat{min-height:150px;padding:13px 12px;border-radius:15px}.staticon{width:39px;height:39px}.statlabel{font-size:10px}.stat strong{font-size:21px}.hint{font-size:9px}.sectionhead{margin-top:29px}.sectionhead h2{font-size:19px}.sectionhead p{font-size:11px}.tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tool{min-height:185px;padding:17px 14px;border-radius:15px}.toolicon{width:51px;height:51px}.tool h3{font-size:13px}.tool p{font-size:11px}.arrow{right:14px;bottom:12px}.search input{font-size:12px}}
-</style></head><body><div class="layout">
+
+/* ULTRA EDITION LAYER */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 12% 35%,#9ba8c00b,transparent 26%),radial-gradient(circle at 92% 70%,#b9c7db0a,transparent 30%)}
+.hero{min-height:340px;border-color:#424955;background:linear-gradient(112deg,#050608 0%,#101319 48%,#20252e 100%);box-shadow:0 24px 75px #0009,inset 0 1px #ffffff0a}
+.hero:before{inset:-40px -20px -60px 28%;opacity:.9;background:linear-gradient(132deg,transparent 0 24%,#5c6573 24.2%,transparent 24.7% 49%,#252b35 49.2%,transparent 49.8% 68%,#7c8797 68.2%,transparent 68.7%),linear-gradient(32deg,transparent 0 44%,#454e5c 44.2%,transparent 44.8% 64%,#303744 64.2%,transparent 64.8%);mask-image:linear-gradient(90deg,transparent,#000 34%)}
+.hero h1{font-size:clamp(48px,6vw,72px);letter-spacing:-3.8px;background:linear-gradient(180deg,#fff 15%,#d6dbe4 52%,#7f899a 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+.hero .studio-word{display:inline-block;margin-top:3px;padding:5px 0;border-top:1px solid #737d8d66;border-bottom:1px solid #737d8d44;color:#e1e6ef;letter-spacing:clamp(9px,1.8vw,18px);font-size:11px}
+.hero .eyebrow{display:flex;align-items:center;gap:10px}.hero .eyebrow:before{content:"";width:24px;height:1px;background:#e0e5ee}
+.hero p{font-size:14px;max-width:480px}
+.stats{gap:15px}.stat{position:relative;overflow:hidden;background:linear-gradient(140deg,#191d25,#0b0c10 76%);border-color:#343a45;box-shadow:inset 0 1px #ffffff08}.stat:after{content:"";position:absolute;right:-24px;top:-35px;width:100px;height:100px;border:1px solid #aebbd00c;border-radius:50%;box-shadow:0 0 0 15px #aebbd006}.stat strong{font-size:29px}.stat .hint{display:flex;align-items:center;gap:5px}.tool{background:linear-gradient(135deg,#191d24 0%,#101217 52%,#0a0b0e 100%);border-color:#303641;box-shadow:inset 0 1px #ffffff08}.toolicon{background:linear-gradient(145deg,#353c49,#15181f 68%);border-color:#505866;box-shadow:inset 0 1px #ffffff19,0 8px 22px #0005;color:#f2f4f8}.tool h3{font-size:14px;letter-spacing:.1px}.tool p{max-width:220px}.tool:hover{border-color:#7b8799;box-shadow:0 15px 35px #0008,0 0 0 1px #aebbd00c}
+.sectionhead h2{letter-spacing:-.8px}.sectionhead h2:after{content:"";display:block;width:30px;height:2px;margin-top:7px;background:linear-gradient(90deg,#e8edf6,transparent)}
+.btn.primary{box-shadow:0 8px 25px #dce4f014,inset 0 1px #fff}.btn.primary:hover{box-shadow:0 10px 30px #dce4f028}
+.logo{background:linear-gradient(145deg,#1d222b,#0d0f13);box-shadow:0 0 25px #dbe5f20d,inset 0 1px #fff1}.avatar{border-color:#a4adbb;box-shadow:0 0 0 3px #ffffff08,0 0 22px #c6d1e00c}
+@keyframes silverSweep{0%,100%{opacity:.42;transform:translateX(-2%)}50%{opacity:.75;transform:translateX(1%)}}
+.hero:after{animation:silverSweep 8s ease-in-out infinite}
+@media(max-width:650px){.hero{min-height:330px;padding:30px 22px}.hero h1{font-size:49px;letter-spacing:-2.7px}.hero:before{left:-4%;opacity:.72}.stats{gap:8px}.stat strong{font-size:23px}.tool{min-height:180px}}
+.ultraGlow .hero{box-shadow:0 24px 75px #0009,0 0 40px #b9c7db12,inset 0 1px #ffffff0a}.ultraGlow .toolicon{box-shadow:inset 0 1px #ffffff19,0 0 20px #c5d1e014}\\n</style></head><body><div class="layout">
 <aside class="sidebar" id="sidebar"><div class="brand"><div class="logo"><i></i><i></i><i></i><i></i></div><div><strong>BiiLHex</strong><small>STUDIO / CREATOR</small></div></div><div class="navcap">WORKSPACE</div><nav class="nav"><button class="active" data-page="dashboard"><span class="ico">◈</span> Dashboard</button><button data-page="projects"><span class="ico">▣</span> Saved Projects</button><button data-page="tools"><span class="ico">✧</span> Creative Tools</button><button data-page="upload"><span class="ico">⇧</span> Upload Center</button><button data-page="animations"><span class="ico">♟</span> Animations</button><button data-page="library"><span class="ico">◇</span> My Library</button><button data-page="history"><span class="ico">↻</span> Upload History</button><button data-page="settings"><span class="ico">⚙</span> Settings</button></nav><div class="sidefoot"><div class="status"><i class="dot"></i> Studio Status · Ready</div><p>Black / Silver Creator Workspace</p></div></aside>
 <main><header class="topbar"><button class="hamb" id="hamb">☰</button><div class="search">⌕ <input id="search" placeholder="Search tools, projects, assets..."></div><div class="topright"><button class="roundbtn" id="theme" title="Toggle glow">☼</button><div class="avatar">B</div></div></header>
 <section class="page active" id="dashboard"><div class="hero"><div class="herocontent"><div class="eyebrow">WELCOME TO</div><h1>BiiLHex</h1><div class="studio-word">S T U D I O</div><p>Satu workspace untuk mengatur project, menyimpan ide, dan menjelajahi tools kreatif BiiLHex Studio.</p><div class="actions"><button class="btn primary" onclick="go('tools')">Jelajahi Tools &nbsp; →</button><button class="btn" onclick="go('projects')">Buka Project</button></div></div></div>
@@ -33,7 +49,7 @@ main{margin-left:245px;padding:23px clamp(16px,3.4vw,48px) 55px;max-width:1700px
 <script>
 const $=s=>document.querySelector(s),read=k=>{try{return JSON.parse(localStorage.getItem('bhx_'+k)||'[]')}catch{return[]}},write=(k,v)=>localStorage.setItem('bhx_'+k,JSON.stringify(v));
 function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===p));document.querySelectorAll('[data-page]').forEach(x=>x.classList.toggle('active',x.dataset.page===p));$('#sidebar').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'})}
-document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(b.dataset.page));$('#hamb').onclick=()=>$('#sidebar').classList.toggle('open');$('#theme').onclick=()=>document.body.classList.toggle('extraGlow');
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(b.dataset.page));$('#hamb').onclick=()=>$('#sidebar').classList.toggle('open');$('#theme').onclick=()=>{document.body.classList.toggle('extraGlow');document.body.classList.toggle('ultraGlow')};
 function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function addProject(){let n=prompt('Nama project:');if(n&&n.trim()){let p=read('projects');p.push({name:n.trim(),date:new Date().toLocaleDateString()});write('projects',p);render()}}
 function removeProject(i){let p=read('projects');p.splice(i,1);write('projects',p);render()}
@@ -48,7 +64,7 @@ function saveSettings(){localStorage.setItem('bhx_workspace',$('#workspaceName')
 </script></body></html>`;
 export default { async fetch(request, env) {
  const url = new URL(request.url);
- if (url.pathname === "/api/health") return Response.json({ok:true,service:"BiiLHex Studio"});
+ if (url.pathname === "/api/health") return Response.json({ok:true,service:"BiiLHex Studio Ultra"});
  if (url.pathname === "/api/assets/upload" && request.method === "POST") {
    if (!env.ROBLOX_API_KEY) return Response.json({error:"ROBLOX_API_KEY belum dipasang di Worker Secrets."},{status:503});
    return Response.json({error:"Endpoint upload Roblox belum dikonfigurasi untuk jenis aset ini."},{status:501});
